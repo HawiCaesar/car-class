@@ -10,22 +10,22 @@ class Car(object):
 		
 		
 		# Except Porsche and Koenigsegg
-		if self.name in ['Porsche', 'Koenigsegg']:
-			self.number_of_doors = 2
+		if self.name in ['Porshe', 'Koenigsegg']:
+			self.num_of_doors = 2
 		else:
-			self.number_of_doors = 4
+			self.num_of_doors = 4
 
 
 		#check if car type is trailer
 		if self.car_type == "trailer":
-			self.number_of_wheels = 8
+			self.num_of_wheels = 8
 		else:
-			self.number_of_wheels = 4
+			self.num_of_wheels = 4
 
 
 	#Check if car is saloon based on wheels
 	def is_saloon(self):
-		if self.number_of_wheels == 8:
+		if self.num_of_wheels == 8:
 			return False
 		else:
 			return True
@@ -37,13 +37,15 @@ class Car(object):
 		else:
 			self.speed = round(value * 333.333)
 
+		return self
+
 
 
 
 b = Car("MAN","Truck","trailer")
 k= Car('Koenigsegg', 'Agera R')
 
-print(k.number_of_wheels)
-print(b.number_of_wheels)
+print(k.num_of_wheels)
+print(b.num_of_wheels)
 print(b.is_saloon())
 
